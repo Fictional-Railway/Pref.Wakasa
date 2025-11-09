@@ -167,10 +167,31 @@
       }
     }
 
-    .rail-map li{
-        text-decoration: none;
-    }
+.section .rail-map {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 
-    .rail-map p{
-        margin-left: 10px;
-    }
+.rail-map h2 {
+  font-size: 1.6em;
+}
+
+.rail-map p {
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+  color: #333;
+}
+
+.rail-map ul {
+  list-style: none; /* デフォルトの点を消す */
+  padding-left: 1.2em;
+  border-left: 3px solid #ddd; /* 視覚的なガイドライン */
+  margin: 0 0 0.8em 0;
+}
+
+.rail-map li {
+  margin: 0.3em 0;
+  padding-left: 0.3em;
+}
