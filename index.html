@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>若狭県|トップページ</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>若狭県ナビ</h1>
+    </div>
+  </header>
+
+  <!-- ハンバーガーアイコン -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- 背景オーバーレイ -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- スライドインメニュー -->
+  <nav id="nav">
+    <ul>
+      <li><a href="#about">若狭県とは</a></li>
+      <li><a href="#area">地域紹介</a></li>
+      <li><a href="#food">グルメ</a></li>
+      <li><a href="#sight">観光地</a></li>
+      <li><a href="#rail">交通・鉄道</a></li>
+      <li><a href="#news">ニュース</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about" class="section">
+      <h2>若狭県とは</h2>
+      <p>日本海に面した美しい海岸線と、豊かな山々に囲まれた自然の宝庫。若狭県は、伝統文化と近代都市が調和する架空の地方県です。</p>
+      <img src="./img/wakasa-map.png" alt="若狭県の地図">
+    </section>
+
+    <section id="area" class="section">
+      <h2>地域紹介</h2>
+      <div class="grid">
+        <article>
+          <h3>若狭市</h3>
+          <p>若狭県の県庁所在地。商業や交通の中心都市。</p>
+        </article>
+        <article>
+          <h3>兵府市</h3>
+          <p>過去と現代が融合した総合都市。???????????。</p>
+        </article>
+        <article>
+          <h3>物部市</h3>
+          <p>?????????????。????????????????。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="food" class="section">
+      <h2>グルメ</h2>
+      <div class="cards">
+        <figure>
+          <img src="./img/wakasa-sushi.jpg" alt="若狭寿司">
+          <figcaption>若狭寿司 - 地元で採れた魚を使った伝統の味</figcaption>
+        </figure>
+        <figure>
+          <img src="./img/wakasa-crab.jpg" alt="若狭ガニ">
+          <figcaption>若狭ガニ - 冬の味覚の王様</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="sight" class="section">
+      <h2>観光地</h2>
+      <ul>
+        <li>汐崖展望台</li>
+        <li>若狭海浜公園</li>
+        <li>兵府城跡</li>
+        <li>海の駅わかさ</li>
+      </ul>
+    </section>
+
+    <section class="section">
+        <div class="rail-map">
+      <h2>交通・鉄道</h2>
+      <p>国鉄</p>
+      <ul>
+        <li>若狭線(敦賀～馬土川)</li>
+        <li>三都線(若狭～兵府～物部/環状線)</li>
+      </ul>
+      <p>県営鉄道</p>
+      <ul>
+        <li>銀楽線(西江崎～北峰廊)</li>
+        <li>馬土川線(葉が山～折鷺)</li>
+        <li>柳平線(物部～飛鷺一丁目)</li>
+      </ul>
+      <p>兵府市営地下鉄</p>
+      <ul>
+        <li>兵府線(兵府～上柳平/環状線)</li>
+      </ul>
+      <p>若狭市営地下鉄</p>
+      <ul>
+        <li>地下鉄若狭線(???)</li>
+      </ul>
+      <p>若狭海岸鉄道</p>
+      <ul>
+        <li>若狭海岸鉄道 若狭海岸線(東江～香津)</li>
+      </ul>
+      <p>若狭南部鉄道</p>
+      <ul>
+        <li>深谷線(建設予定)</li>
+        <li>南緑線(建設予定)</li>
+      </ul>
+      <p>京橋鉄道</p>
+      <ul>
+        <li>早手川線(渡町～西銀樂)</li>
+        <li>甲日線(管理番号65～乱邦)</li>
+        <li>徳峰線(舞鶴～綿野)</li>
+      </ul>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <h2>ニュース・トピック</h2>
+      <ul class="news-list">
+        <li><time>2025/11/01</time> 若狭ガニ漁が解禁！</li>
+        <li><time>2025/08/01</time> 汐崖町でついに崖祭開催！</li>
+        <li><time>2025/02/05</time> 豪雪による県内影響のご案内</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 若狭県ナビ</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+    const overlay = document.getElementById("overlay");
+
+    // メニュー開閉
+    menuToggle.addEventListener("click", () => {
+      const isActive = menuToggle.classList.toggle("active");
+      nav.classList.toggle("active");
+      overlay.classList.toggle("active");
+      // 背景スクロール固定
+      document.body.style.overflow = isActive ? "hidden" : "auto";
+    });
+
+    // オーバーレイやリンククリックで閉じる
+    overlay.addEventListener("click", closeMenu);
+    document.querySelectorAll("#nav a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    function closeMenu() {
+      menuToggle.classList.remove("active");
+      nav.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  </script>
+</body>
+</html>
