@@ -178,7 +178,8 @@
             background: white;
             border: 1px solid #eee;
             border-radius: 8px;
-            padding: 20px;
+            padding: 5px;
+            margin: 0px;
             text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -247,13 +248,13 @@
 
             /* ボタンのアニメーション用クラス */
             .hamburger-btn.active .hamburger-line:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
+                transform: rotate(49deg) translate(6.5px, 5px);
             }
             .hamburger-btn.active .hamburger-line:nth-child(2) {
                 opacity: 0;
             }
             .hamburger-btn.active .hamburger-line:nth-child(3) {
-                transform: rotate(-45deg) translate(5px, -5px);
+                transform: rotate(-45deg) translate(5.5px, -5px);
             }
             .hamburger-btn.active .hamburger-text {
                 content: "閉じる"; /* 注: CSSでテキスト変更はcontentプロパティでは難しいので、ここは見た目だけの変化 */
